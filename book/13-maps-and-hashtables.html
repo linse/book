@@ -63,19 +63,18 @@
 	      href="code/maps-and-hash-tables/main.topscript" />
 
 	<p>
-	  You can observe that this was a little more concise with
-	  maps than with association lists. That's because the
-	  association list operations need to be told how to check
-	  keys for equality on each invocation. Building a map
-	  requires not just equality on keys but also the ability to
-	  compare keys, since maps are implemented as sorted binary
-	  trees.  But these comparison functions only needed for
-	  functions like <code>Map.of_alist_exn</code> that construct
-	  a map from scratch.
+	  This is a little more concise than the association list
+	  version because association list operations need to be told
+	  how to check keys for equality on each invocation. Maps need
+	  the same information (and more, since they need to be able
+	  to order keys, not just check for equality), but this
+	  information need only be presented for functions
+	  like <code>Map.of_alist_exn</code> that construct a map from
+	  scratch.
 	</p>
 
 	<p>
-	  When building maps, the knowledge of how to compare keys is
+	  When building a map, the knowledge of how to compare keys is
 	  provided in the form of a first-class module. So, to create
 	  an empty map indexed by integers, we'd write <code>Map.empty
 	  (module Int)</code>. The comparison function embedded in
@@ -84,56 +83,56 @@
 	  like <code>Map.find</code>.
 	</p>
 
-	<p>
-	  Maps actually need more than just the ability to compare
-	  keys; they also need to be able to serialize keys for the
-	  purpose of generating error messages.
-	</p>
+	<section id="Comparator witnesses" data-type="sect2">
+	  <h2>Comparator witnesses</h2>
 
-	<link rel="import" part="3.1" 
-	      href="code/maps-and-hash-tables/main.topscript" />
-	
-	<p>
-	  It's worth taking a moment to look at the type signature of
-	  a map, and compare it to that of a corresponding association
-	  list.
-	</p>
+	  <p>
+	    It's worth taking a moment to look at the type signature of
+	    a map, and compare it to that of a corresponding association
+	    list.
+	  </p>
 
-	<link rel="import" part="4" 
-	      href="code/maps-and-hash-tables/main.topscript" />
+	  <link rel="import" part="cw.1" 
+		href="code/maps-and-hash-tables/main.topscript" />
 
-	<p>
-	  The association list effectively has two type parameters,
-	  one for the type of the key (<code>int</code>) and one for
-	  the type of the data (<code>string</code>).
-	</p>
+	  <p>
+	    The association list effectively has two type parameters,
+	    one for the type of the key (<code>int</code>) and one for
+	    the type of the data (<code>string</code>).
+	  </p>
 
-	<p>
-	  The map, on the other hand, has <em>three</em> type
-	  parameters: one for the key, one for the data, and one,
-	  called the <em>comparator witness</em>, to indicate the
-	  comparison function in use.  It's not obvious why you need
-	  that last one; after all, how many ways are there of
-	  comparing a given type? Doesn't the type of the key already
-	  imply the comparison function?
-	</p>
+	  <p>
+	    The map, on the other hand, has <em>three</em> type
+	    parameters: one for the key, one for the data, and one,
+	    called the <em>comparator witness</em>. The point of a
+	    comparator witness is to identify the comparison function
+	    that's being used.  This is to avoid mixing up 
+	    maps that have the same key type, but have different ways
+	    of ordering those keys
+	  </p>
 
-	<p>
-	  Most of the time, it does, and
-	  indeed, <code>Int.comparator_witness</code> represents the
-	  default comparison function provided by the <code>Int</code>
-	  module. But as we'll see later, it can be useful to have
-	  different comparison functions, and therefore different
-	  comparator witnesses, for the same type.
-	</p>
+	  
+	  <link rel="import" part="cw.1" 
+		href="code/maps-and-hash-tables/main.topscript" />
 
-	<p>
-	  But before we get to that, we have a more basic question to
-	  address. The examples thus far have all used standard types
-	  with their own dedicated module in <code>Base</code>; but
-	  what if you have your own type that you want to use as a map
-	  key? We'll cover that next.
-	</p>
+	  <p>
+	    Most of the time, it does, and
+	    indeed, <code>Int.comparator_witness</code> represents the
+	    default comparison function provided by
+	    the <code>Int</code> module. But as we'll see later, it
+	    can be useful to have different comparison functions, and
+	    therefore different comparator witnesses, for the same
+	    type.
+	  </p>
+
+	  <p>
+	    But before we get to that, we have a more basic question to
+	    address. The examples thus far have all used standard types
+	    with their own dedicated module in <code>Base</code>; but
+	    what if you have your own type that you want to use as a map
+	    key? We'll cover that next.
+	  </p>
+	</section>
 
 	<section id="Maps with custom keys" data-type="sect2">
 	  <h2> Maps with custom keys </h2>

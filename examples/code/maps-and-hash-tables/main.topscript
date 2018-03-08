@@ -48,7 +48,7 @@ Map.set digit_map 0 "zilch" |> Map.to_alist;;
 Map.of_alist_exn (module Int) [22, "three"; 22, "four"];;
 [%%expect{|Exception: ("Map.of_alist_exn: duplicate key" 22).|}];;
 
-[@@@part "4"];;
+[@@@part "cw.1"];;
 [(3, "three")];;
 [%%expect ocaml {|- : (int * string) list = [(3, "three")]|}];;
 Map.singleton (module Int) 3 "three";;
