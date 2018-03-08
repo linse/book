@@ -24,27 +24,15 @@
 	<idx>lists/association lists</idx>
 	<idx>association lists</idx></p>
 
-<<<<<<< working copy
       <link rel="import" part="1"
-	    href="code/maps-and-hash-tables/main.topscript" />
-||||||| base
-      <link rel="import" href="code/maps-and-hash-tables/main.topscript" part="1"/>
-=======
-      <link rel="import" href="code/maps-and-hash-tables/main.mlt" part="1"/>
->>>>>>> merge rev
+	    href="code/maps-and-hash-tables/main.mlt" />
 
       <p>
 	We can use functions from the <code>List.Assoc</code> module
 	to manipulate this data:</p>
 
-<<<<<<< working copy
       <link rel="import" part="2"
-	    href="code/maps-and-hash-tables/main.topscript" />
-||||||| base
-      <link rel="import" href="code/maps-and-hash-tables/main.topscript" part="2"/>
-=======
-      <link rel="import" href="code/maps-and-hash-tables/main.mlt" part="2"/>
->>>>>>> merge rev
+	    href="code/maps-and-hash-tables/main.mlt" />
 
       <p>
 	Association lists are simple and easy to use, but their
@@ -72,7 +60,7 @@
 	  association lists.</p>
 
 	<link rel="import" part="3" 
-	      href="code/maps-and-hash-tables/main.topscript" />
+	      href="code/maps-and-hash-tables/main.mlt" />
 
 	<p>
 	  This is a little more concise than the association list
@@ -105,7 +93,7 @@
 	  </p>
 
 	  <link rel="import" part="cw.1" 
-		href="code/maps-and-hash-tables/main.topscript" />
+		href="code/maps-and-hash-tables/main.mlt" />
 
 	  <p>
 	    The association list effectively has two type parameters,
@@ -125,7 +113,7 @@
 
 	  
 	  <link rel="import" part="cw.1" 
-		href="code/maps-and-hash-tables/main.topscript" />
+		href="code/maps-and-hash-tables/main.mlt" />
 
 	  <p>
 	    Most of the time, it does, and
@@ -137,7 +125,6 @@
 	    type.
 	  </p>
 
-<<<<<<< working copy
 	  <p>
 	    But before we get to that, we have a more basic question to
 	    address. The examples thus far have all used standard types
@@ -158,12 +145,7 @@
 	  </p>
 
           <link rel="import" part="ck.1"
-		href="code/maps-and-hash-tables/main.topscript" />
-||||||| base
-          <link rel="import" href="code/maps-and-hash-tables/main.topscript" part="3"/>
-=======
-          <link rel="import" href="code/maps-and-hash-tables/main.mlt" part="3"/>
->>>>>>> merge rev
+		href="code/maps-and-hash-tables/main.mlt" />
 
 	  <p>
 	    Note that we used a <code>deriving</code> annotation to
@@ -180,7 +162,7 @@
 	  </p>
 	  
           <link rel="import" part="ck.2"
-		href="code/maps-and-hash-tables/main.topscript" />
+		href="code/maps-and-hash-tables/main.mlt" />
 
 	  <p>
 	    The module we created has a comparison function, but
@@ -194,20 +176,20 @@
 
 <<<<<<< working copy
           <link rel="import" part="ck.3"
-		href="code/maps-and-hash-tables/main.topscript" />
+		href="code/maps-and-hash-tables/main.mlt" />
 
 	  <p>
 	    We can now construct a map using this module, as we did
 	    above with the <code>Int</code> module.
 	  </p>
 ||||||| base
-          <link rel="import" href="code/maps-and-hash-tables/main.topscript" part="4"/>
+          <link rel="import" href="code/maps-and-hash-tables/main.mlt" part="4"/>
 =======
           <link rel="import" href="code/maps-and-hash-tables/main.mlt" part="4"/>
 >>>>>>> merge rev
 
           <link rel="import" part="ck.4"
-		href="code/maps-and-hash-tables/main.topscript" />
+		href="code/maps-and-hash-tables/main.mlt" />
 
 	  <p>
 	    Now we have two modules, <code>Service_id</code>, which
@@ -219,7 +201,7 @@
 	  </p>
 
           <link rel="import" part="ck.5"
-		href="code/maps-and-hash-tables/main.topscript" />
+		href="code/maps-and-hash-tables/main.mlt" />
 
 	  <p>
 	    Here, we created a sub-module <code>T</code> that had the
@@ -229,7 +211,6 @@
 	    to <code>T</code>, in the same module.
 	  </p>
 
-<<<<<<< working copy
 	  <p>
 	    The functor <code>Comparator.Make</code> gives you just
 	    what you need to create a map. Often, what you really want
@@ -239,18 +220,13 @@
 	  </p>
 
           <link rel="import" part="ck.6"
-		href="code/maps-and-hash-tables/main.topscript" />
+		href="code/maps-and-hash-tables/main.mlt" />
 
 	</section>
 
 
 	<section id="Different comparators for the same type" data-type="sect2">
 	  <h2> Different comparators for the same type </h2>
-||||||| base
-          <link rel="import" href="code/maps-and-hash-tables/main.topscript" part="5"/>
-=======
-          <link rel="import" href="code/maps-and-hash-tables/main.mlt" part="5"/>
->>>>>>> merge rev
 
           <p>
 	    We still haven't really explained why maps have a
@@ -259,22 +235,15 @@
 	    now.
 	  </p>
 
-<<<<<<< working copy
 	  <p>
 	    To see how the comparator witness comes into play,
 	    consider the type of <code>Map.merge</code>, which is a
 	    function for combining two maps into one.
 	  </p>
-||||||| base
-          <link rel="import" href="code/maps-and-hash-tables/main.topscript" part="6"/>
-=======
-          <link rel="import" href="code/maps-and-hash-tables/main.mlt" part="6"/>
->>>>>>> merge rev
 
           <link rel="import" part="dc.1"
-		href="code/maps-and-hash-tables/main.topscript" />
+		href="code/maps-and-hash-tables/main.mlt" />
 
-<<<<<<< working copy
 	  <p>
 	    If you read the signature carefully, you'll see that the
 	    type of the data can be different in all three maps, as
@@ -283,35 +252,6 @@
 	    and <code>'v3</code> for the two input maps and the
 	    resulting map respectively.
 	  </p>
-||||||| base
-          <p>
-	    We can create a new comparator using the
-            <code>Comparator.Make</code> functor, which takes as its
-            input a module containing the type of the object to be
-            compared, sexp converter functions, and a comparison
-            function. The sexp converters are included in the
-            comparator to make it possible for users of the comparator
-            to generate better error messages. Here's an
-            example:
-
-	    <idx>Sexplib package/sexp converter</idx></p>
-
-          <link rel="import" href="code/maps-and-hash-tables/main.topscript" part="7"/>
-=======
-          <p>
-	    We can create a new comparator using the
-            <code>Comparator.Make</code> functor, which takes as its
-            input a module containing the type of the object to be
-            compared, sexp converter functions, and a comparison
-            function. The sexp converters are included in the
-            comparator to make it possible for users of the comparator
-            to generate better error messages. Here's an
-            example:
-
-	    <idx>Sexplib package/sexp converter</idx></p>
-
-          <link rel="import" href="code/maps-and-hash-tables/main.mlt" part="7"/>
->>>>>>> merge rev
 
 	  <p>
 	    The type of the key, <code>'k</code>, and the type of the
@@ -324,7 +264,6 @@
 	    are sorted in the same way.
 	  </p>
 
-<<<<<<< working copy
 	  <p>
 	    Let's see what happens if we try to
 	    use <code>Map.merge</code> on two maps with the same key
@@ -332,90 +271,34 @@
 	    comparator for something other than the default comparison
 	    function for some type. We do that below.
 	  </p>
-||||||| base
-          <link rel="import" href="code/maps-and-hash-tables/main.topscript" part="8"/>
 
-          <p>
-	    <code>Map.min_elt</code> returns the key and value for
-            the smallest key in the map, which lets us see that these
-            two maps do indeed use different comparison functions:</p>
-
-          <link rel="import" href="code/maps-and-hash-tables/main.topscript" part="9"/>
-=======
-          <link rel="import" href="code/maps-and-hash-tables/main.mlt" part="8"/>
-
-          <p>
-	    <code>Map.min_elt</code> returns the key and value for
-            the smallest key in the map, which lets us see that these
-            two maps do indeed use different comparison functions:</p>
-
-          <link rel="import" href="code/maps-and-hash-tables/main.mlt" part="9"/>
->>>>>>> merge rev
-
-<<<<<<< working copy
           <link rel="import" part="dc.2"
-		href="code/maps-and-hash-tables/main.topscript" />
+		href="code/maps-and-hash-tables/main.mlt" />
 	  
 	  <p>
 	    As the following example demonstrates, the ordering
 	    induced by maps constructed with <code>String</code>
 	    and <code>Rev_string</code> are in fact different.
 	  </p>
-||||||| base
-          <p>
-	    Accordingly, if we try to use
-            <code>Map.symmetric_diff</code> on these two maps, we'll
-            get a compile-time error:</p>
-
-          <link rel="import" href="code/maps-and-hash-tables/main.topscript" part="10"/>
-	</section>
-
-	<section id="trees" data-type="sect2">
-          <h2>Trees</h2>
-=======
-          <p>
-	    Accordingly, if we try to use
-            <code>Map.symmetric_diff</code> on these two maps, we'll
-            get a compile-time error:</p>
-
-          <link rel="import" href="code/maps-and-hash-tables/main.mlt" part="10"/>
-	</section>
-
-	<section id="trees" data-type="sect2">
-          <h2>Trees</h2>
->>>>>>> merge rev
 
           <link rel="import" part="dc.3"
-		href="code/maps-and-hash-tables/main.topscript" />
+		href="code/maps-and-hash-tables/main.mlt" />
 
-<<<<<<< working copy
 	  <p>
 	    Now, let's see what happens if we try to merge together
 	    two maps, one built with the <code>String</code>
 	    comparator, and one with the <code>Rev_string</code>
 	    comparator.
 	  </p>
-||||||| base
-	    <idx>Map module/Map.to_tree</idx>
-	    <idx>maps/tree structure</idx></p>
-
-          <link rel="import" href="code/maps-and-hash-tables/main.topscript" part="11"/>
-=======
-	    <idx>Map module/Map.to_tree</idx>
-	    <idx>maps/tree structure</idx></p>
-
-          <link rel="import" href="code/maps-and-hash-tables/main.mlt" part="11"/>
->>>>>>> merge rev
 
           <link rel="import" part="dc.4"
-		href="code/maps-and-hash-tables/main.topscript" />
+		href="code/maps-and-hash-tables/main.mlt" />
 	  
 	  <p>
 	    As you can see, OCaml warns us that the two comparators
 	    are incompatible.
 	  </p>
 
-<<<<<<< working copy
 	  <p>
 	    The example here is a little artificial, but this is a
 	    real world issue. For one thing, there are occasional but
@@ -426,23 +309,7 @@
 	    cases, it's good to have the type system to help you avoid
 	    doing crazy things.
 	  </p>
-||||||| base
-          <p>
-	    Since the comparator isn't included in the tree, we need
-            to provide the comparator explicitly when we, say, search
-            for a key, as shown below:</p>
 
-          <link rel="import" href="code/maps-and-hash-tables/main.topscript" part="12"/>
-=======
-          <p>
-	    Since the comparator isn't included in the tree, we need
-            to provide the comparator explicitly when we, say, search
-            for a key, as shown below:</p>
-
-          <link rel="import" href="code/maps-and-hash-tables/main.mlt" part="12"/>
->>>>>>> merge rev
-
-<<<<<<< working copy
 	  <p>
 	    Another common case you might run into is when dealing
 	    with the comparison that comes from the default per-type
@@ -455,27 +322,6 @@
 	    mixing polymorphic comparison with other type-specific
 	    comparison functions.
 	  </p>
-||||||| base
-          <p>
-	    The algorithm of <code>Map.Tree.find</code> depends on
-            the fact that it's using the same comparator when looking
-            up a value as you were when you stored it. That's the
-            invariant that the phantom type is there to enforce. As you
-            can see in the following example, using the wrong
-            comparator will lead to a type error:</p>
-
-          <link rel="import" href="code/maps-and-hash-tables/main.topscript" part="13"/>
-=======
-          <p>
-	    The algorithm of <code>Map.Tree.find</code> depends on
-            the fact that it's using the same comparator when looking
-            up a value as you were when you stored it. That's the
-            invariant that the phantom type is there to enforce. As you
-            can see in the following example, using the wrong
-            comparator will lead to a type error:</p>
-
-          <link rel="import" href="code/maps-and-hash-tables/main.mlt" part="13"/>
->>>>>>> merge rev
 	</section>
 
 	<section id="the-polymorphic-comparator" data-type="sect2">
